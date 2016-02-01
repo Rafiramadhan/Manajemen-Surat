@@ -52,7 +52,7 @@
                     <td>{{ $book->unit_kerja }}</td>
        
                     
-                    <td><a class="btn btn-primary" data-toggle="modal" data-id ="book->id" data-target="#modalshow<?php echo $book->id;?>" href="#"><span class="glyphicon glyphicon-user"></a></td>
+                    <td><a class="btn btn-primary" data-placement="bottom" title="Lihat Data" data-toggle="modal" data-id ="book->id" data-target="#modalshow<?php echo $book->id;?>" href="#"><span class="glyphicon glyphicon-user"></a></td>
                     <div class="modal fade" id="modalshow<?php echo $book->id;?>" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
@@ -307,8 +307,8 @@
                         </div>
                     </div>                    
 
-                    <td><a class="btn btn-warning" href="{{ url('getData/employees/'.$book->id.'/edit')}}"><span class="glyphicon glyphicon-pencil"></a></td>
-                    <td><a class="btn btn-danger" data-toggle="modal" href="#" data-target="#modaldelete"><span class="glyphicon glyphicon-trash"></a></td>
+                    <td><a class="btn btn-warning" data-placement="bottom" title="Edit Data" href="{{ url('getData/employees/'.$book->id.'/edit')}}"><span class="glyphicon glyphicon-pencil"></a></td>
+                    <td><a class="btn btn-danger" data-placement="bottom" title="Hapus Data" data-toggle="modal" href="#" data-target="#modaldelete"><span class="glyphicon glyphicon-trash"></a></td>
                     <div class="modal fade" id="modaldelete" tabindex="-1" role="dialog">
                         <div class="modal-dialog modal-sm" role="document">
                             <div class="modal-content">
