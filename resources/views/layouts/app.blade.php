@@ -8,14 +8,14 @@
   <title>SIM-Kepegawaian Dinas Pendidikan DIY</title>
   <meta name="author" content="Vinsensius Satya, Yosef Brian, Misbach Imaduddin">
 
-  <link rel="shortcut icon" href="{{ URL::asset('img/favicon.ico') }}">
+  <link rel="shortcut icon" href="img/favicon.ico">
 
   <!-- Fonts -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
 
   <!-- Styles -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <link href="{{ URL::asset('css/get-shit-done.css') }}" rel="stylesheet" />  
   <link href="{{ URL::asset('css/demo.css') }}" rel="stylesheet">
   @yield('head.style')
@@ -72,9 +72,53 @@
                           </a>
 
                           <ul class="dropdown-menu" role="menu">
+                             
+                              <li><a href="{{URL::route('admin.users.export')}}"><i class="fa fa-btn glyphicon glyphicon-download"></i>Ekspor Data</a></li>
+                      
+                              <div class="divider"></div>
+
+                              <li><a href="#" data-toggle="modal" data-target="#modalimport"><i class="fa fa-btn glyphicon glyphicon-upload"></i>Impor Data</a></li>
+                      
+                              <div class="divider"></div>
+                          
                               <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                          
                           </ul>
                       </li>
+                              <div class="modal fade" id="modalimport" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content" align="center">
+                                    <div class="panel">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <span style="css/bootstrap-min.css"><h3><b>Unggah Data</b></h3></span>
+                                    </div>
+                                    </div>
+                                    
+
+
+                                    <div class="modal-body">
+                                      <div class="panel">
+                                      <input type="hidden" value="#" name="id">
+
+                                    <form action="{{ action('ExportController@upload') }}" method="post" enctype="multipart/form-data">
+                                      <label for="fileToUpload">Impor file excel (xls)</label>
+                                      <input type="file" class="btn btn-default btn-file" name="fileToUpload" id="fileToUpload">
+                                      <input type="submit" class="btn btn-success" value="Import" name="submit">
+                                      <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+                                     
+                                    </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-info" data-dismiss="modal">Batal</button>
+                                    </div>
+                                    
+                              </div>
+                              </div>
+                              </div>
+                              </div>
                   @endif
               </ul>
           </div>

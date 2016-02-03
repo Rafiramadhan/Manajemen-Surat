@@ -14,7 +14,7 @@
 
 @section('content.getData')
 
-<div class="col-xs-12"><a href="{{ url('getData/employees/create') }}" class="btn btn-primary">Tambah Pegawai</a>
+<div class="col-xs-12"><a href="{{ url('getData/employees/create') }}" title="Tambah" class="btn btn-primary">Tambah Pegawai</a>
   <div class="form-group" style="float:right">
   {!! Form::open(['url'=>'getData/search', 'class'=>'form-group']) !!}  
     
@@ -52,7 +52,7 @@
                     <td>{{ $book->unit_kerja }}</td>
        
                     
-                    <td><a class="btn btn-primary" data-toggle="modal" data-id ="book->id" data-target="#modalshow<?php echo $book->id;?>" href="#"><span class="glyphicon glyphicon-user"></a></td>
+                    <td><a class="btn btn-primary" title="Lihat Data" data-toggle="modal" data-id ="book->id" data-target="#modalshow<?php echo $book->id;?>" href="#"><span class="glyphicon glyphicon-user"></a></td>
                     <div class="modal fade" id="modalshow<?php echo $book->id;?>" tabindex="-1" role="dialog">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
@@ -299,16 +299,16 @@
                                 </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Kembali</button>
+                                    <button type="button" title="Kembali" class="btn btn-default btn-simple" data-dismiss="modal">Kembali</button>
                                     <div class="divider"></div>
-                                    <a class="btn btn-warning btn-simple" href="{{ url('getData/employees/'.$book->id.'/edit')}}">Ganti</a>
+                                    <a class="btn btn-warning btn-simple" title="Hapus" href="{{ url('getData/employees/'.$book->id.'/edit')}}">Ganti</a>
                                 </div>
                             </div>
                         </div>
                     </div>                    
 
-                    <td><a class="btn btn-warning" href="{{ url('getData/employees/'.$book->id.'/edit')}}"><span class="glyphicon glyphicon-pencil"></a></td>
-                    <td><a class="btn btn-danger" data-toggle="modal" href="#" data-target="#modaldelete"><span class="glyphicon glyphicon-trash"></a></td>
+                    <td><a class="btn btn-warning" title="Edit" href="{{ url('getData/employees/'.$book->id.'/edit')}}"><span class="glyphicon glyphicon-pencil"></a></td>
+                    <td><a class="btn btn-danger" title="Hapus" data-toggle="modal" href="#" data-target="#modaldelete"><span class="glyphicon glyphicon-trash"></a></td>
                     <div class="modal fade" id="modaldelete" tabindex="-1" role="dialog">
                         <div class="modal-dialog modal-sm" role="document">
                             <div class="modal-content">
@@ -326,7 +326,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Kembali</button>
                                     <div class="divider"></div>
-                                    <a class="btn btn-danger btn-simple" href="{{ action('HomeController@delete', $book->id) }}">Hapus</a>
+                                    <a class="btn btn-danger btn-simple" title="Hapus" href="{{ action('HomeController@delete', $book->id) }}">Hapus</a>
                                 </div>
                             </div>
                         </div>
