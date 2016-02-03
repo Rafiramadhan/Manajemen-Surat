@@ -5,13 +5,13 @@
   <div class="col-xs-6">
     <div class="form-group">
     {!! Form::label('NIP', 'NIP') !!}
-    {!! Form::text('nip', null, ['class'=> 'form-control']) !!}
+    {!! Form::text('nip', null, ['class'=> 'form-control', 'placeholder' => "Masukkan NIP" ]) !!}
     </div>
   </div>
   <div class="col-xs-6">
     <div class="form-group">
     {!! Form::label('No Karpeg', 'No Karpeg') !!}
-    {!! Form::text('no_karpeg', null, ['class'=> 'form-control']) !!}
+    {!! Form::text('no_karpeg', null, ['class'=> 'form-control', 'placeholder' => "Masukkan Nomor Kartu Pegawai" ]) !!}
     </div>
   </div>
 </div>
@@ -25,7 +25,7 @@
   <div class="col-xs-9">
     <div class="form-group">
     {!! Form::label('Nama', 'Nama') !!}
-    {!! Form::text('nama', null, ['class'=> 'form-control']) !!}
+    {!! Form::text('nama', null, ['class'=> 'form-control', 'placeholder' => "Masukkan Nama" ]) !!}
     </div>
   </div>
   <div class="col-xs-3">
@@ -81,7 +81,7 @@ $agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
   <div class="col-xs-4">
     <div class="form-group">
     {!! Form::label('Tempat Lahir', 'Tempat Lahir') !!}
-    {!! Form::text('tempat_lahir', null, ['class'=> 'form-control']) !!}
+    {!! Form::text('tempat_lahir', null, ['class'=> 'form-control', 'placeholder' => "Masukkan Tempat Lahir" ]) !!}
     </div>
   </div>
   <div class="col-xs-4">
@@ -96,7 +96,7 @@ $agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
       }
       ?>
     {!! Form::label('Tanggal Lahir', 'Tanggal Lahir') !!}
-    {!! Form::text('tanggal_lahir', $tanggal_lahir, ['class'=> 'form-control']) !!}
+    {!! Form::text('tanggal_lahir', $tanggal_lahir, ['class'=> 'form-control', 'placeholder' => "dd/mm/yyyy"]) !!}
 
     </div>
   </div>
@@ -119,13 +119,13 @@ $agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
       }
       ?>
     {!! Form::label('TMT CPNS', 'TMT CPNS') !!}
-    {!! Form::text('tmt_cpns', $tmt_cpns, ['class'=> 'form-control']) !!}
+    {!! Form::text('tmt_cpns', $tmt_cpns, ['class'=> 'form-control', 'placeholder' => "dd/mm/yyyy"]) !!}
     </div>
   </div>
   <div class="col-xs-4">
     <div class="form-group">
     {!! Form::label('TMT PNS', 'TMT PNS') !!}
-    {!! Form::text('tmt_pns', null, ['class'=> 'form-control']) !!}
+    {!! Form::text('tmt_pns', null, ['class'=> 'form-control', 'placeholder' => "dd/mm/yyyy"]) !!}
     </div>
   </div>
   <div class="col-xs-4">
@@ -138,7 +138,7 @@ $agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
       }
       ?>
     {!! Form::label('TMT Pangkat Terakhir', 'TMT Pangkat Terakhir') !!}
-    {!! Form::text('tmt_pangkat_terakhir', $tmt_pangkat_terakhir, ['class'=> 'form-control']) !!}
+    {!! Form::text('tmt_pangkat_terakhir', $tmt_pangkat_terakhir, ['class'=> 'form-control', 'placeholder' => "dd/mm/yyyy"]) !!}
     </div>
   </div>
 </div>
@@ -151,7 +151,7 @@ $agm = array('', 'ISLAM', 'KATHOLIK', 'KRISTEN', 'HINDU', 'BUDHA');
   <div class="col-xs-6">
     <div class="form-group">
     {!! Form::label('Jabatan', 'Jabatan') !!}
-    {!! Form::text('jabatan', null, ['class'=> 'form-control']) !!}
+    {!! Form::text('jabatan', null, ['class'=> 'form-control', 'placeholder' => "Masukkan Jabatan"]) !!}
     </div>
   </div>
 
@@ -269,13 +269,13 @@ foreach($pilihan as $opsi){
   <div class="col-xs-6">
     <div class="form-group">
     {!! Form::label('Unit Kerja', 'Unit Kerja') !!}
-    {!! Form::text('unit_kerja', null, ['class'=> 'form-control']) !!}
+    {!! Form::text('unit_kerja', null, ['class'=> 'form-control', 'placeholder' => "Masukkan Unit Kerja (contoh : SMAN 1)"]) !!}
     </div>
   </div>
   <div class="col-xs-6">
     <div class="form-group">
     {!! Form::label('Instansi', 'Instansi') !!}
-    {!! Form::text('instansi', null, ['class'=> 'form-control']) !!}
+    {!! Form::text('instansi', null, ['class'=> 'form-control', 'placeholder' => "Masukkan Instansi (contoh : Dinas Pendidikan)"]) !!}
     </div>
   </div>
 </div>
@@ -288,19 +288,19 @@ foreach($pilihan as $opsi){
   <div class="col-xs-4">
     <div class="form-group">
     {!! Form::label('Pendidikan Terakhir', 'Jenjang Pendidikan Terakhir') !!}
-    {!! Form::text('pendidikan_terakhir', null, ['class'=> 'form-control']) !!}
+    {!! Form::text('pendidikan_terakhir', null, ['class'=> 'form-control', 'placeholder' => "Masukkan Jenjang Pendidikan (contoh : S1)"]) !!}
     </div>
   </div>
   <div class="col-xs-4">
     <div class="form-group">
     {!! Form::label('Pendidikan Tahun Lulus', 'Tahun Lulus') !!}
-    {!! Form::text('pendidikan_tahun_lulus', null, ['class'=> 'form-control']) !!}
+    {!! Form::text('pendidikan_tahun_lulus', null, ['class'=> 'form-control', 'placeholder' => "yyyy"]) !!}
     </div>
   </div>
   <div class="col-xs-4">
     <div class="form-group">
     {!! Form::label('Pendidikan Universitas', 'Nama Instansi Pendidikan') !!}
-    {!! Form::text('pendidikan_univ', null, ['class'=> 'form-control']) !!}
+    {!! Form::text('pendidikan_univ', null, ['class'=> 'form-control', 'placeholder' => "Masukkan Instansi Pendidikan (contoh : UGM)"]) !!}
     </div>
   </div>
 </div>
@@ -309,13 +309,13 @@ foreach($pilihan as $opsi){
   <div class="col-xs-7">
     <div class="form-group">
     {!! Form::label('Pendidikan Tempat', 'Lokasi Instansi Pendidikan') !!}
-    {!! Form::text('pendidikan_tempat', null, ['class'=> 'form-control']) !!}
+    {!! Form::text('pendidikan_tempat', null, ['class'=> 'form-control', 'placeholder' => "Masukkan Lokasi (contoh : Yogyakarta)"]) !!}
     </div>
   </div>
   <div class="col-xs-5">
     <div class="form-group">
     {!! Form::label('Pendidikan Jurusan', 'Jurusan') !!}
-    {!! Form::text('pendidikan_jurusan', null, ['class'=> 'form-control']) !!}
+    {!! Form::text('pendidikan_jurusan', null, ['class'=> 'form-control', 'placeholder' => "Masukkan Jurusan"]) !!}
     </div>
   </div>
 </div>
